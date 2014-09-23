@@ -1,0 +1,18 @@
+{
+    "authors": [
+        {
+            "name": "Marina Shynkarenko",
+            "email": "",
+            "homepage": "http://marinaua.github.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "ASCIITable\\": "asciitable/"
+        }
+    }
+}
