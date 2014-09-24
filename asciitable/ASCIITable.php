@@ -11,13 +11,13 @@ use ASCIITable\TableDataStore;
 use ASCIITable\Structure\Table;
 use ASCIITable\Draw\ASCII\ASCIIDrawer;
 use ASCIITable\Draw\ASCII\ASCIIAbstractDrawer;
-use ASCIITable\TableTypeInterface;
+use ASCIITable\ASCIITableInterface;
 
 /**
  * Class ASCIITable
  * @package ASCIITable
  */
-class ASCIITable implements TableTypeInterface {
+class ASCIITable implements ASCIITableInterface {
 
     /** @var  TableDataStore $data */
     protected $tableDataStore;

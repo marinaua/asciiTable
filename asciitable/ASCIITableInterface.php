@@ -1,7 +1,7 @@
 <?php
 namespace ASCIITable;
 
-interface TableTypeInterface {
+interface ASCIITableInterface {
     public function setDrawer($drawer);
     public function getDrawer();
     public function setTableDataStore(TableDataStore $data);
