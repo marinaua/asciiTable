@@ -3,7 +3,7 @@ use ASCIITable\Reader\ArrayReader;
 use ASCIITable\ASCIITable;
 use ASCIITable\Draw\ASCII\ASCIIDrawer;
 use ASCIITable\ActionManager;
-use ASCIITable\Actions\MarginAction;
+use ASCIITable\Actions\PaddingAction;
 use ASCIITable\Actions\LowerCaseAction;
 use ASCIITable\Actions\UpperCaseAction;
 use ASCIITable\Aligns\AlignCenter;
@@ -43,12 +43,12 @@ $asciiTable = new ASCIITable();
 $asciiTable->setTableDataStore($tableDataStore);
 
 $actionManager = new ActionManager();
-$actionManager->addCellAction(2, 1, new MarginAction());
-$actionManager->addColumnAction(2, new MarginAction());
+$actionManager->addCellAction(2, 1, new PaddingAction());
+$actionManager->addColumnAction(2, new PaddingAction());
 $actionManager->addColumnAction(2, new UpperCaseAction());
 $actionManager->addHeadAction(new UpperCaseAction());
-$actionManager->addHeadAction(new MarginAction());
-$actionManager->addEachCellAction(new MarginAction());
+$actionManager->addHeadAction(new PaddingAction());
+$actionManager->addEachCellAction(new PaddingAction());
 
 $alignManager = new AlignManager();
 $alignManager->setHeadAlign(new AlignCenter());
