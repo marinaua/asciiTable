@@ -1,6 +1,11 @@
 <?php
 namespace ASCIITable\Actions;
 
+/**
+ * Class UpperCaseAction
+ * Change case of string to upper
+ * @package ASCIITable\Actions
+ */
 class UpperCaseAction extends AbstractAction {
 
     /**

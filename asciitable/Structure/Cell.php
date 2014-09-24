@@ -18,6 +18,24 @@ class Cell implements CellInterface{
     protected $column;
      /** @var  int $row */
     protected $row;
+    /** @var  string $renderedValue */
+    protected $renderedValue;
+
+    /**
+     * @param string $renderedValue
+     */
+    public function setRenderedValue($renderedValue)
+    {
+        $this->renderedValue = $renderedValue;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRenderedValue()
+    {
+        return $this->renderedValue;
+    }
 
     /**
      * @return int

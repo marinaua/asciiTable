@@ -10,12 +10,14 @@
 namespace ASCIITable\Aligns;
 
 
+use ASCIITable\Structure\CellInterface;
+
 interface AlignInterface {
 
     /**
-     * @param string $string
-     * @param int $width
-     * @return string
+     * @param CellInterface $cell
+     * @param $width
+     * @return mixed
      */
-    public function apply($string, $width);
+    public function apply(CellInterface $cell, $width);
 }

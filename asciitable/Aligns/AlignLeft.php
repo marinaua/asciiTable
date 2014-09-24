@@ -10,15 +10,17 @@
 namespace ASCIITable\Aligns;
 
 
+use ASCIITable\Structure\CellInterface;
+
 class AlignLeft implements AlignInterface {
 
     /**
-     * @param string $string
-     * @param int $width
-     * @return string
+     * @param CellInterface $cell
+     * @param $width
+     * @return mixed|string
      */
-    public function apply($string, $width)
+    public function apply(CellInterface $cell, $width)
     {
-        return str_pad($string, $width , " ");
+        return str_pad($cell->getRenderedValue(), $width , " ");
     }
 }

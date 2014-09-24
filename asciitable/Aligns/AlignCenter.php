@@ -1,16 +1,21 @@
 <?php
 namespace ASCIITable\Aligns;
+use ASCIITable\Structure\CellInterface;
 
-
+/**
+ * Class AlignCenter
+ * Align string center
+ * @package ASCIITable\Aligns
+ */
 class AlignCenter implements AlignInterface {
 
     /**
-     * @param string $string
+     * @param CellInterface $cell
      * @param int $width
      * @return string
      */
-    public function apply($string, $width)
+    public function apply(CellInterface $cell, $width)
     {
-        return str_pad($string, $width , " ", STR_PAD_BOTH);
+        return str_pad($cell->getRenderedValue(), $width , " ", STR_PAD_BOTH);
     }
 }

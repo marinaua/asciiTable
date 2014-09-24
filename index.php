@@ -44,10 +44,9 @@ $asciiTable->setTableDataStore($tableDataStore);
 
 $actionManager = new ActionManager();
 $actionManager->addCellAction(2, 1, new PaddingAction());
-$actionManager->addColumnAction(2, new PaddingAction());
+$actionManager->addColumnAction(2, new PaddingAction(2, 6));
 $actionManager->addColumnAction(2, new UpperCaseAction());
 $actionManager->addHeadAction(new UpperCaseAction());
-$actionManager->addHeadAction(new PaddingAction());
 $actionManager->addEachCellAction(new PaddingAction());
 
 $alignManager = new AlignManager();

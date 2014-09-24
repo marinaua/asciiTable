@@ -91,12 +91,15 @@ abstract class ASCIIAbstractDrawer {
      * @return string
      */
     protected function renderCell(CellInterface $cell, $align = false){
-        $actions = $this->actionManager->getActionsByCell($cell);
-        $cellValue = $this->applyActions($cell, $actions);
+        if('' == $cell->getRenderedValue()) {
+            $actions = $this->actionManager->getActionsByCell($cell);
+            $cellValue = $this->applyActions($cell, $actions);
+            $cell->setRenderedValue($cellValue);
+        }
         if(true == $align) {
             $alignment = $this->alignManager->getAlignment($cell);
             if(false == is_null($alignment)) {
-                $cellValue = $alignment->apply($cellValue, $this->columnLengths[$cell->getColumn()]);
+                $cellValue = $alignment->apply($cell, $this->columnLengths[$cell->getColumn()]);
             }
         }
 

@@ -3,6 +3,7 @@ namespace ASCIITable\Actions;
 
 /**
  * Class PaddingAction
+ * Add left and right padding to string
  * @package ASCIITable\Actions
  */
 class PaddingAction extends AbstractAction {
@@ -16,11 +17,11 @@ class PaddingAction extends AbstractAction {
     /** @var  int */
     protected $paddingRight;
 
-    public function __construct($paddingLeft = 0, $paddingRight = 0, $paddingSign = ' ')
+    public function __construct($paddingLeft = 1, $paddingRight = 1)
     {
         $this->paddingLeft = $paddingLeft;
         $this->paddingRight = $paddingRight;
-        $this->paddingSign = $paddingSign;
+        $this->paddingSign = ' ';
     }
 
     /**
