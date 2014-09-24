@@ -1,22 +1,20 @@
 <?php
 namespace ASCIITable\Structure;
 
-use ASCIITable\Actions\ActionInterface;
-use ASCIITable\Structure\Column;
-
 /**
  * Class Cell
  * @package ASCIITable\Structure
  */
-class Cell implements CellInterface{
+class Cell implements CellInterface
+{
 
     /** @var  string $string */
     protected $value;
     /** @var  CellActions */
-    protected $actions=[];
+    protected $actions = [];
     /** @var  int */
     protected $column;
-     /** @var  int $row */
+    /** @var  int $row */
     protected $row;
     /** @var  string $renderedValue */
     protected $renderedValue;
@@ -54,7 +52,7 @@ class Cell implements CellInterface{
     }
 
     /**
-     * 
+     *
      * @param string $string
      * @param int $column
      * @param int $row
@@ -70,7 +68,8 @@ class Cell implements CellInterface{
     /**
      * @return int
      */
-    public function getLength(){
+    public function getLength()
+    {
         return strlen($this->value);
     }
 
@@ -85,7 +84,8 @@ class Cell implements CellInterface{
     /**
      * @param $value
      */
-    public function setValue($value){
+    public function setValue($value)
+    {
         $this->value = $value;
     }
 

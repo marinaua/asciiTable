@@ -1,7 +1,12 @@
 <?php
 namespace ASCIITable\Actions;
 
-interface ActionInterface {
+/**
+ * Class ActionInterface
+ * @package ASCIITable\Actions
+ */
+interface ActionInterface
+{
 
     /**
      * @param $string

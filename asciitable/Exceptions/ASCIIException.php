@@ -1,7 +1,11 @@
 <?php
 namespace ASCIITable\Exceptions;
 
-
-class ASCIIException extends \Exception{
+/**
+ * Class ASCIIException
+ * @package ASCIITable\Exceptions
+ */
+class ASCIIException extends \Exception
+{
 
 }

@@ -1,17 +1,16 @@
 <?php
 namespace ASCIITable;
-use \ArrayIterator;
-use ASCIITable\Exceptions\ASCIIException;
 
 /**
  * Class TableDataStore
  * @package ASCIITable
  */
-class TableDataStore {
+class TableDataStore
+{
 
     /** @var array $titles All titles */
     protected $titles;
-    /** @var array $rows All data excluding titles*/
+    /** @var array $rows All data excluding titles */
     protected $rows;
 
     /**

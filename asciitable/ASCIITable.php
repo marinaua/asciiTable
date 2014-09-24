@@ -1,66 +1,73 @@
 <?php
 namespace ASCIITable;
 
-use ASCIITable\Actions\LowerCaseAction;
-use ASCIITable\Actions\UpperCaseAction;
 use ASCIITable\Actions\AlignLeftAction;
-use ASCIITable\Structure\Cell;
-use ASCIITable\Structure\Column;
-use ASCIITable\Structure\Row;
-use ASCIITable\TableDataStore;
-use ASCIITable\Structure\Table;
-use ASCIITable\Draw\ASCII\ASCIIDrawer;
-use ASCIITable\Draw\ASCII\ASCIIAbstractDrawer;
 use ASCIITable\ASCIITableInterface;
+use ASCIITable\Draw\ASCII\ASCIIDrawer;
+use ASCIITable\Draw\DrawerInterface;
+use ASCIITable\Structure\Cell;
+use ASCIITable\Structure\Row;
+use ASCIITable\Structure\Table;
+use ASCIITable\TableDataStore;
 
 /**
  * Class ASCIITable
  * @package ASCIITable
  */
-class ASCIITable implements ASCIITableInterface {
+class ASCIITable implements ASCIITableInterface
+{
 
     /** @var  TableDataStore $data */
     protected $tableDataStore;
 
-    /** @var  ASCIIDrawer $data */
+    /** @var  DrawerInterface $data */
     protected $drawer;
 
-    function __construct() {
+    function __construct()
+    {
         $this->drawer = new ASCIIDrawer();
         $this->drawer->setActionManager(new ActionManager());
         $this->drawer->setAlignManager(new AlignManager());
     }
 
     /**
-     * 
-     * @return ASCIIDrawer
+     *
+     * @return DrawerInterface
      */
-    public function getDrawer() {
+    public function getDrawer()
+    {
         return $this->drawer;
     }
 
     /**
-     * @param mixed $drawer
+     * @param DrawerInterface $drawer
      */
-    public function setDrawer($drawer) {
+    public function setDrawer(DrawerInterface $drawer)
+    {
         $this->drawer = $drawer;
     }
 
     /**
      * @param TableDataStore $data
      */
-    public function setTableDataStore(TableDataStore $data) {
+    public function setTableDataStore(TableDataStore $data)
+    {
         $this->tableDataStore = $data;
     }
 
     /**
      * @return TableDataStore
      */
-    public function getTableDataStore() {
+    public function getTableDataStore()
+    {
         return $this->tableDataStore;
     }
 
-    public function run() {
+    /**
+     * @return void
+     */
+    public function run()
+    {
         $table = new Table();
         $row = new Row();
         $titles = $this->tableDataStore->getTitles();
@@ -74,7 +81,6 @@ class ASCIITable implements ASCIITableInterface {
         $table->addRow($row);
 
         $j = 1;
-
         foreach ($rows as $row) {
             $tableRow = new Row();
             $i = 0;
@@ -87,7 +93,11 @@ class ASCIITable implements ASCIITableInterface {
         $this->drawer->setTable($table);
     }
 
-    public function draw() {
+    /**
+     * @return void
+     */
+    public function draw()
+    {
         $this->drawer->draw();
     }
 

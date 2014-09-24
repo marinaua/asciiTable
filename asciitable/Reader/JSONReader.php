@@ -2,7 +2,8 @@
 namespace ASCIITable\Reader;
 
 
-class JSONReader implements ReaderInterface {
+class JSONReader implements ReaderInterface
+{
 
     public function read($data)
     {

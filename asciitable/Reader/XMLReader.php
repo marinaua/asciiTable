@@ -2,7 +2,8 @@
 namespace ASCIITable\Reader;
 
 
-class XMLReader implements ReaderInterface {
+class XMLReader implements ReaderInterface
+{
 
     public function read($data)
     {

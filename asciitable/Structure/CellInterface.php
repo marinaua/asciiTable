@@ -1,7 +1,11 @@
 <?php
 namespace ASCIITable\Structure;
 
-
-interface CellInterface extends StructureInterface {
+/**
+ * Class CellInterface
+ * @package ASCIITable\Structure
+ */
+interface CellInterface extends StructureInterface
+{
 
 }

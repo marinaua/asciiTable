@@ -1,7 +1,11 @@
 <?php
 namespace ASCIITable\Structure;
 
-
-interface StructureInterface {
+/**
+ * Class StructureInterface
+ * @package ASCIITable\Structure
+ */
+interface StructureInterface
+{
 
 }

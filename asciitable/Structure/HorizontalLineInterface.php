@@ -1,7 +1,11 @@
 <?php
 namespace ASCIITable\Structure;
 
-
-interface HorizontalLineInterface extends StructureInterface {
+/**
+ * Class HorizontalLineInterface
+ * @package ASCIITable\Structure
+ */
+interface HorizontalLineInterface extends StructureInterface
+{
 
 }

@@ -3,10 +3,18 @@ namespace ASCIITable\Reader;
 
 use ASCIITable\TableDataStore;
 
+/**
+ * Class ArrayReader
+ * @package ASCIITable\Reader
+ */
 class ArrayReader implements ReaderInterface
 {
-    private $tableDataStore;
+    /** @var TableDataStore $tableDataStore */
+    protected $tableDataStore;
 
+    /**
+     * @param array $array
+     */
     public function read($array)
     {
         $this->tableDataStore = new TableDataStore();
@@ -14,23 +22,31 @@ class ArrayReader implements ReaderInterface
         $this->extractRows($array);
     }
 
-    public function getTableDataStore(){
+    /**
+     * @return TableDataStore
+     */
+    public function getTableDataStore()
+    {
         return $this->tableDataStore;
     }
 
     /**
-     * @param $array
+     * @param array $array
      */
-    protected function extractTitles($array)
+    protected function extractTitles(array $array)
     {
-        $titles=[];
+        $titles = [];
         foreach ($array as $elements) {
             $titles = array_merge($titles, array_keys($elements));
         }
         $this->tableDataStore->setTitles(array_unique($titles));
     }
 
-    protected function extractRows($array){
+    /**
+     * @param array $array
+     */
+    protected function extractRows(array $array)
+    {
         $data = [];
         foreach ($array as $element) {
             $rows = [];

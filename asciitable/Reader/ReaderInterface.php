@@ -1,9 +1,11 @@
 <?php
 namespace ASCIITable\Reader;
+
 /**
  * Class ReaderInterface
  * @package ASCIITable\Reader
  */
-interface ReaderInterface {
+interface ReaderInterface
+{
     public function read($data);
 }
