@@ -35,8 +35,13 @@ class Cell implements CellInterface{
         return $this->column;
     }
 
-
-    function __construct($string, $column, $row)
+    /**
+     * 
+     * @param string $string
+     * @param int $column
+     * @param int $row
+     */
+    public function __construct($string, $column, $row)
     {
         $this->value = $string;
         $this->column = $column;

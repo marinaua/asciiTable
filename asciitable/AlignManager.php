@@ -36,7 +36,12 @@ class AlignManager {
     public function setEachCellAlign(AlignInterface $align){
         $this->eachCellAlign = $align;
     }
-
+    
+    /**
+     * 
+     * @param CellInterface $cell
+     * @return AlignInterface
+     */
     public function getAlignment(CellInterface $cell){
         if((false == is_null($this->headAlign)) && $cell->getRow() == 0){
             return $this->headAlign;

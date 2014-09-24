@@ -21,8 +21,14 @@ class ASCIITable
     protected $tableDataStore;
     /** @var  ASCIIDrawer $data */
     protected $drawer;
+    
+    function __construct() {
+        $this->drawer = new ASCIIDrawer();
+        $this->drawer->setActionManager(new ActionManager());
+        $this->drawer->setAlignManager(new AlignManager());
+    }
 
-    /**
+        /**
      * @param mixed $drawer
      */
     public function setDrawer($drawer)

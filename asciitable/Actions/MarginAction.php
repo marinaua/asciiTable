@@ -9,7 +9,7 @@ class MarginAction extends AbstractAction {
 
     protected $margin;
 
-    function __construct($margin = ' ')
+    public function __construct($margin = ' ')
     {
         $this->margin=$margin;
     }

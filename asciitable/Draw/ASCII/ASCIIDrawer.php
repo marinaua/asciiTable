@@ -63,7 +63,7 @@ class ASCIIDrawer extends ASCIIAbstractDrawer{
         return $result;
     }
 
-    function draw(){
+    public function draw(){
         echo $this->build();
     }
 }

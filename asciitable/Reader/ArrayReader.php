@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: Marik
- * Date: 16.09.14
- * Time: 19:58
- * To change this template use File | Settings | File Templates.
- */
 namespace ASCIITable\Reader;
 
 use ASCIITable\TableDataStore;

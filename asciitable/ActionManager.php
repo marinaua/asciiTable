@@ -1,7 +1,6 @@
 <?php
 namespace ASCIITable;
 
-
 use ASCIITable\Actions\ActionInterface;
 use ASCIITable\Actions\MarginAction;
 use ASCIITable\Actions\UpperCaseAction;
